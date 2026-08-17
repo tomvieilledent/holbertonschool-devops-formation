@@ -1,13 +1,12 @@
-# Premières PR
+# First PRs
 
 https://github.com/tomvieilledent/holbertonschool-devops-formation/pull/1
 
-Ajout d'une ligne de description dans index.html présentant le projet. Le reviewer a demandé d'ajouter le nom de l'auteur, correction appliquée puis PR approuvée et mergée.
+Added a description line in index.html presenting the project. The reviewer asked to add the author's name, the fix was applied, then the PR was approved and merged.
 
 https://github.com/tomvieilledent/holbertonschool-devops-formation/pull/2
 
-Mise à jour du nom du projet dans index.html. Le reviewer a demandé de changer le nom indiqué, correction appliquée puis PR approuvée et mergée.
+Updated the project name in index.html. The reviewer asked to change the given name, the fix was applied, then the PR was approved and merged.
 
 
-J'ai appris qu'on pouvait faire plus précisement de la review de PR, je n'avais utilisé la review qu'en cas de conflit. Je sais maintenant qu'on peut commenter, et approuver des modification au cours d'une meme PR
-
+I learned that PR reviews can be more precise than I thought, I had only used reviews in case of conflicts. I now know that you can comment on and approve changes during the same PR.
