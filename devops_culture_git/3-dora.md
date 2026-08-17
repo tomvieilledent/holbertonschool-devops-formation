@@ -1,40 +1,40 @@
-# Quizz DORA
+# DORA Quiz
 
 ## Q1
 
-Deployement frequency -> frequence à laquelle on déploie en prod.
-Lead time for changes -> temps total d'une modification du début du code a la mise en prod.
-Change failure rate -> taux de déploiement en prod qui pose problème.
-Mean time to restore -> temps moyen pour régler le déploiement problématique.
+- Deployment frequency -> how often you deploy to production.
+- Lead time for changes -> total time from the start of a code change to its deployment in production.
+- Change failure rate -> rate of deployments to production that cause problems.
+- Mean time to restore -> average time to fix a problematic deployment.
 
 ## Q2
 
-La fréquence de déploiement est mauvaise, ils ne déploient pas assez souvent.
+The deployment frequency is bad, they don't deploy often enough.
 
 ## Q3
 
-Si je réduit le temps entre la PR et la mise en prod je réduit le temps de mise en production donc le lead time for change s'améliore.
+If I reduce the time between the PR and the production deployment, I reduce the time to deployment, so the lead time for change improves.
 
 ## Q4
 
-1 déploiement sur 4 pose problème donc on a un taudx de change failure rate de 25% ce qui est une valeur assez élevée et donc pas bonne. Beaucoup de changement entraînent des problèmes en prod.
+1 out of 4 deployments causes a problem, so we have a change failure rate of 25%, which is a fairly high and therefore bad value. Many changes lead to problems in production.
 
 ## Q5
 
-L'acronyme CALMS veut dure Culture Automation Lean Measurment Sharing, autrement dit une manière de travailler efficacement ensemble et améliorer continuellement les process.
+The acronym CALMS stands for Culture Automation Lean Measurement Sharing, in other words a way of working together efficiently and continuously improving processes.
 
 ## Q6
 
-Faux, une bonne équipe doit déployer souvent et en petites modifications. Plus rapide à realiser, tester, modifier et donc à mettre en production.
+False, a good team should deploy often and in small changes. Faster to build, test, modify, and therefore to deploy to production.
 
 ## Q7
 
-Pour améliorer le MTTR il vaut mieux monitorer, alerter et avoir des rollback automatique ce qui permet un retour à la normale plus rapidement .
+To improve MTTR, it is better to monitor, alert, and have automatic rollbacks, which allows for a faster return to normal.
 
 ## Q8
 
-La capacité de livraisont ( throughput) est mesurée grace à la deployment frequency et au lead time for changes quand la stabilité est mesurée grace  au MTTR et au change failure time.
+Delivery capacity (throughput) is measured using deployment frequency and lead time for changes, while stability is measured using MTTR and change failure rate.
 
 ## Q9
 
-L'idée n'est pas de blamer la personne a qui est due l'erreur mais plutot de savoir pourquoi cette erreur est arrivé en prod dans le but de s'améliorer et de ne plus faire cette erreur.
+The idea is not to blame the person responsible for the error, but rather to understand why this error occurred in production in order to improve and avoid making this mistake again.
