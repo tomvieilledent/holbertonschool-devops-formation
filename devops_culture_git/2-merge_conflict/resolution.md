@@ -1,3 +1,3 @@
-# Conflict resolution
+# Résolution du conflit
 
-The `version` line was in conflict (`1.1.0` vs `2.0.0`), because both branches changed it from the same base value (`1.0.0`) to a different one. The `replicas` and `feature_dark_mode` lines merged automatically since each was changed by only one branch. I kept `version: 2.0.0`, the higher value, reflecting the combined result of both merged features.
+La ligne `version` était en conflit (`1.1.0` vs `2.0.0`), car les deux branches l'avaient modifiée à partir de la même valeur de base (`1.0.0`) vers des valeurs différentes. Les lignes `replicas` et `feature_dark_mode` ont fusionné automatiquement car chacune n'avait été modifiée que par une seule branche. J'ai gardé `version: 2.0.0`, la valeur la plus haute, reflétant le résultat combiné des deux fonctionnalités fusionnées.
