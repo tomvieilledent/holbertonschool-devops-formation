@@ -1,4 +1,3 @@
-```text
 === Vérification de l'environnement ===
   [ OK ] Docker installé et démon actif (Docker version 28.5.2)
   [ OK ] Git installé (git version 2.50.1 (Apple Git-155))
@@ -8,4 +7,4 @@
   [ OK ] Node.js présent (v26.7.0)
 =======================================
 Tout est pret. Bon cours !
-```
+
