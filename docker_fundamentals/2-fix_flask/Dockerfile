@@ -4,6 +4,7 @@ WORKDIR /app
 
 COPY . .
 
+# Ce qu'il manquait
 RUN pip install -r requirements.txt
 
 EXPOSE 5000
