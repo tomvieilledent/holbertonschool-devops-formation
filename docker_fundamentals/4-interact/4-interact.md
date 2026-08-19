@@ -1,6 +1,6 @@
 # 4-interact
 
-Le serveur Express de `1-first_image` a été rendu configurable via la variable d'environnement `GREETING` :
+The Express server from `1-first_image` has been made configurable via the `GREETING` environment variable:
 
 ```js
 const greeting = process.env.GREETING || "Hello world";
@@ -16,19 +16,19 @@ app.get("/", (req, res) => {
 ```docker build -t interact-image .```
 
 
-## 0. Sans passer `GREETING` (valeur par défaut)
+## 0. Without passing `GREETING` (default value)
 
 ```docker run -d --name interact-default -p 3000:3000 interact-image```
 
 ```curl http://localhost:3000```
 
-Observé :
+Observed:
 
 ```bash
 Hello world
 ```
 
-## 1. Passer la variable au run (`-e`)
+## 1. Passing the variable to `run` (`-e`)
 
 
 ```docker run -d --name interact-container -p 3000:3000 -e GREETING="Salut depuis Docker" interact-image```
@@ -38,7 +38,7 @@ Hello world
 ```curl http://localhost:3000```
 
 
-Observé :
+Observed:
 
 
 ```bash
@@ -46,13 +46,13 @@ Salut depuis Docker
 ```
 
 
-## 2. Lire la variable depuis l'intérieur du container (`exec`)
+## 2. Reading the variable from inside the container (`exec`)
 
 
 ```docker exec interact-container printenv GREETING```
 
 
-Observé :
+Observed:
 
 
 ```bash
@@ -60,13 +60,13 @@ Salut depuis Docker
 ```
 
 
-## 3. Inspecter le container (`inspect` / `logs`)
+## 3. Inspecting the container (`inspect` / `logs`)
 
 
 ```docker inspect interact-container --format '{{.Config.Env}}'```
 
 
-Observé :
+Observed:
 
 
 ```bash
@@ -78,20 +78,20 @@ Observé :
 ```docker logs interact-container```
 
 
-Observé :
+Observed:
 
 
 ```bash
 Server running on port 3000
 ```
 
-## Cas d'usage : dev vs prod
+## Use case: dev vs prod
 
-Le même principe permet de démarrer une image en mode `dev` ou `prod` sans la rebuild, via une variable comme `NODE_ENV` :
+The same principle allows starting an image in `dev` or `prod` mode without rebuilding, via a variable such as `NODE_ENV`:
 
 ```bash
-docker run -e NODE_ENV=development mon-image
-docker run -e NODE_ENV=production mon-image
+docker run -e NODE_ENV=development my-image
+docker run -e NODE_ENV=production my-image
 ```
 
-Le code adapte son comportement selon `process.env.NODE_ENV` (logs plus verbeux, connexion à une DB différente, etc.). Une seule image, un comportement différent selon la variable passée au `run`.
+The code adapts its behavior based on `process.env.NODE_ENV` (more verbose logs, connection to a different DB, etc.). One single image, different behavior depending on the variable passed to `run`.
