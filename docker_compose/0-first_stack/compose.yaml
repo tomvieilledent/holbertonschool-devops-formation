@@ -1,11 +1,19 @@
 services:
   web:
     image: nginx:alpine
+    volumes:
+      - ./web/default.conf:/etc/nginx/conf.d/default.conf:ro
     ports:
-      - "8080:80"
+      - "8081:80"
+    depends_on:
+      - api
 
   api:
-    image: httpd:alpine
+    build: ./api
+    environment:
+      REDIS_URL: redis://database:6379
+    depends_on:
+      - database
 
   database:
     image: redis:alpine
