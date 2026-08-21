@@ -2,11 +2,11 @@ services:
   database:
     image: postgres:16-alpine
     environment:
-      POSTGRES_USER: todo
-      POSTGRES_PASSWORD: todo
-      POSTGRES_DB: todo
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: admin
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U todo -d todo"]
+      test: ["CMD-SHELL", "pg_isready -U admin -d admin"]
       interval: 5s
       timeout: 5s
       retries: 5
@@ -17,6 +17,6 @@ services:
       database:
         condition: service_healthy
     environment:
-      DATABASE_URL: postgres://todo:todo@database:5432/todo
+      DATABASE_URL: postgres://admin:admin@database:5432/admin
     ports:
       - "3001:3000"
