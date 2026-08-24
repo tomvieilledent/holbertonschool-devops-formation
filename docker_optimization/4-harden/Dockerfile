@@ -3,12 +3,15 @@ FROM node:20-alpine
 WORKDIR /usr/src/app
 
 RUN addgroup app && adduser -S -G app app
-USER app
+RUN apk add --no-cache curl
 
 COPY package*.json ./
 RUN npm install
 COPY . .
+USER app
 
-HEALTHCHECK CMD curl -f http://localhost:8080/health || exit 1
+EXPOSE 3000
+
+HEALTHCHECK CMD curl -f http://localhost:3000/health || exit 1
 
 CMD ["node", "server.js"]
