@@ -12,6 +12,6 @@ USER app
 
 EXPOSE 3000
 
-HEALTHCHECK CMD curl -f http://localhost:3000/health || exit 1
+HEALTHCHECK --start-period=5s --interval=5s  --retries=5 CMD curl -f http://localhost:3000/health || exit 1
 
 CMD ["node", "server.js"]
